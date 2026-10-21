@@ -13,7 +13,7 @@ y2 = -1*np.sin(t) + 0.5
 # plot
 fig, ax = plt.subplots()
 
-ax.plot(x, y, linewidth=2.0)
-ax.plot(x2, y2, 'x', markeredgewidth=2)
+ax.plot(x, y, linewidth=2, color='red')
+ax.plot(x2, y2,  linewidth=2, color='blue')
 
 plt.show()
