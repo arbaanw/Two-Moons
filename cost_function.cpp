@@ -9,6 +9,6 @@
 
 using namespace std;
 
-float binary_cross_entropy(const float prediction, const float target) {
-    return -1 * (target * log(prediction) + (1 - target) * log(1 - prediction);
+float binary_cross_entropy(const float& prediction, const float& target) {
+    return -1 * (target * log(prediction) + (1 - target) * log(1 - prediction));
 }

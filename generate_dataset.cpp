@@ -7,10 +7,10 @@ Domain: 0 <= t <= pi
 #include <iostream>
 #include <fstream>
 #include <cmath>
-#include<string>
-#include<vector>
-#include<algorithm>
-#include<random>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <random>
 
 using namespace std;
 
