@@ -1,14 +1,16 @@
 # NEURAL NETWORK FROM SCRATCH
-This neural network was built in c++ from scratch to classify a custom generated two-moons dataset.
+This neural network was built in c++ from scratch to classify a custom-generated **two-moons dataset**.
 
 ## ARCHITECTURE
 
 Number of layers: 4
 breakdown:
-- Input Layer: 2 neurons
-- Hidden Layer I: 10 neurons
-- Hidden Layer II: 10 neurons
-- Output Layer: 1 neuron
+| Layer    | Neurons | Activation |
+|----------|---------|------------|
+| Input    | 2       | —          |
+| Hidden 1 | 10      | ReLU       |
+| Hidden 2 | 10      | ReLU       |
+| Output   | 1       | Sigmoid    |
 
 ## DATASET
 
@@ -19,15 +21,15 @@ The dataset was generated using the following equations:
 ![two-moons equation](assets/images/two-moons-eqn.png)
 
 A few samples:
-
-0.748503,0.663131,0 
-0.878580,0.477595,0 
-1.231476,-0.472841,1 
-1.535606,-0.344468,1 
-0.101983,0.060040,1 
-
-- Training Dataset contains 149948 samples
-- Testing Dataset contains 50000 samples
+```csv
+0.748503,0.663131,0
+0.878580,0.477595,0
+1.231476,-0.472841,1
+1.535606,-0.344468,1
+0.101983,0.060040,1
+```
+- Training Dataset contains 149,948 samples
+- Testing Dataset contains 50,000 samples
 
 ## IMPLEMENTATION
 ### Initialization of weights
@@ -37,27 +39,27 @@ A few samples:
 - initialized to 0
 ### Forward Pass
 - Weighted Sum is calculated
-- ReLU activation function is applied to layers 2 and 3 
-- Sigmoid activation function is applied to layer 4
+- ReLU activation function is applied to both hidden layers
+- Sigmoid activation function is applied to output layer
 ### Cost Function
 Binary Cross Entropy
 $$
 L(y, \hat{y}) = -\left[y\log(\hat{y}) + (1-y)\log(1-\hat{y})\right]
 $$
-### Back Propagation
+### Backpropagation
 - Backpropagation using the chain rule
 - Weight and bias gradient calculations
 - Stochastic gradient descent (SGD)
 
 ## TRAINING
-- The network uses stochastic gradient descent (SGD), updating its weights and biases after each training sample.
-- The training process:
-- Load the training dataset.
-- Perform forward propagation.
-- Calculate binary cross-entropy loss.
-- Calculate gradients through backpropagation.
-- Update weights and biases.
-- Repeat for multiple epochs.
+1. The network uses stochastic gradient descent (SGD), updating its weights and biases after each training sample.
+2. The training process:
+3. Load the training dataset.
+4. Perform forward propagation.
+5. Calculate binary cross-entropy loss.
+6. Calculate gradients through backpropagation.
+7. Update weights and biases.
+8. Repeat for multiple epochs.
 
 ## EVALUATION
 The trained model is evaluated using a separate testing dataset.
@@ -68,6 +70,17 @@ Evaluation metrics:
 
 A prediction threshold of 0.5 is used to convert output probabilities into binary classes.
 ![accuracy equation](assets/images/accuracy-eqn.png)
+
+## RESULTS
+
+The model was evaluated on 50,000 previously unseen testing samples.
+
+| Metric | Result |
+|---|---:|
+| Training samples | 149,948 |
+| Testing samples | 50,000 |
+| Test Accuracy | 100.00% |
+| Epochs | XX |
 
 ## TECHNOLOGIES
 - C++
