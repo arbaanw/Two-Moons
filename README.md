@@ -20,19 +20,19 @@ The dataset was generated using the following equations:
 
 A few samples:
 
-0.748503,0.663131,0
-0.878580,0.477595,0
-1.231476,-0.472841,1
-1.535606,-0.344468,1
-0.101983,0.060040,1
+0.748503,0.663131,0 
+0.878580,0.477595,0 
+1.231476,-0.472841,1 
+1.535606,-0.344468,1 
+0.101983,0.060040,1 
 
 - Training Dataset contains 149948 samples
 - Testing Dataset contains 50000 samples
 
 ## IMPLEMENTATION
 ### Initialization of weights
-- layer 1 and 2 use He Initialization
-- layer 3 uses Xavier Initialization
+- Hidden layers: He initialization
+- Output layer: Xavier initialization
 ### Initialization of biases
 - initialized to 0
 ### Forward Pass
