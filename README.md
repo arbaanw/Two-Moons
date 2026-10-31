@@ -4,7 +4,7 @@ This neural network was built in c++ from scratch to classify a custom-generated
 ## ARCHITECTURE
 
 Number of layers: 4
-breakdown:
+### breakdown:
 | Layer    | Neurons | Activation |
 |----------|---------|------------|
 | Input    | 2       | —          |
