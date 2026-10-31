@@ -8,7 +8,7 @@
 using namespace std;
 
 vector<Eigen::MatrixXf> read_weights() {
-    ifstream weights_file("weights.txt");
+    ifstream weights_file("data/weights.txt");
     if (!weights_file) throw runtime_error("Cannot open weights.txt");
 
     vector<float> values[3];

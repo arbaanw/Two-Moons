@@ -37,7 +37,7 @@ Eigen::MatrixXf Xavier_initialization (int n_in, int n_out) {
 }
 
 int main() {
-    ofstream file("weights.txt");
+    ofstream file("data/weights.txt");
 
     file << "#weights_layer_0" << "\n";
     file << he_initialization(2, 10)<< "\n";

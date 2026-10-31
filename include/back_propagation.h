@@ -14,10 +14,26 @@ vector<Eigen::MatrixXf> weight_gradient(
         const vector<Eigen::VectorXf>& z
         );
 
+vector<Eigen::VectorXf> bias_gradient(
+        const float target,
+        const vector<Eigen::VectorXf>& a, 
+        const vector<Eigen::MatrixXf>& W,
+        const vector<Eigen::VectorXf>& z
+        );
+
 vector<Eigen::MatrixXf> compute_new_weights(
         const float target,
         const float learning_rate,
         const vector<Eigen::VectorXf>& a, 
         const vector<Eigen::MatrixXf>& W,
         const vector<Eigen::VectorXf>& z
+        );
+
+vector<Eigen::VectorXf> compute_new_biases(
+        const float target,
+        const float learning_rate,
+        const vector<Eigen::VectorXf>& a, 
+        const vector<Eigen::MatrixXf>& W,
+        const vector<Eigen::VectorXf>& z,
+        const vector<Eigen::VectorXf>& b
         );
