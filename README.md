@@ -42,10 +42,8 @@ A few samples:
 - ReLU activation function is applied to both hidden layers
 - Sigmoid activation function is applied to output layer
 ### Cost Function
-Binary Cross Entropy
-$$
-L(y, \hat{y}) = -\left[y\log(\hat{y}) + (1-y)\log(1-\hat{y})\right]
-$$
+Binary Cross Entropy: 
+L(y, ŷ) = -[y log(ŷ) + (1 - y) log(1 - ŷ)]
 ### Backpropagation
 - Backpropagation using the chain rule
 - Weight and bias gradient calculations
