@@ -8,7 +8,7 @@ breakdown:
 - Input Layer: 2 neurons
 - Hidden Layer I: 10 neurons
 - Hidden Layer II: 10 neurons
-- Output Layer II: 1 neurons
+- Output Layer: 1 neuron
 
 ## DATASET
 
@@ -18,7 +18,8 @@ Two-Moons refers to two crescent shaped classes on a graph. Which Looks somethin
 The dataset was generated using the following equations:
 ![two-moons equation](assets/images/two-moons-eqn.png)
 
-A few samples: 
+A few samples:
+
 0.748503,0.663131,0
 0.878580,0.477595,0
 1.231476,-0.472841,1
@@ -36,7 +37,7 @@ A few samples:
 - initialized to 0
 ### Forward Pass
 - Weighted Sum is calculated
-- ReLU activation function is applied to layers 1, 2 and 3 
+- ReLU activation function is applied to layers 2 and 3 
 - Sigmoid activation function is applied to layer 4
 ### Cost Function
 Binary Cross Entropy
