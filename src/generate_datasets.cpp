@@ -13,8 +13,8 @@ using namespace std;
 int main() {
     constexpr double PI = 3.141592653589793;
 
-    fstream training_dataset_file("training_dataset.csv", ios::out);
-    fstream testing_dataset_file("testing_dataset.csv", ios::out);
+    fstream training_dataset_file("data/training_dataset.csv", ios::out);
+    fstream testing_dataset_file("data/testing_dataset.csv", ios::out);
     deque<string> data; 
     vector<string> testing_dataset;
     float t;
