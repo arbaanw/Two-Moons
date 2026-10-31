@@ -6,7 +6,7 @@
 
 using namespace std;
 
-std::default_random_engine generator;
+std::default_random_engine generator(std::random_device{}());
 
 Eigen::MatrixXf he_initialization (int n_in, int n_out) {
     Eigen::MatrixXf W = Eigen::MatrixXf::Zero(n_out, n_in);
