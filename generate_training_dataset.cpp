@@ -17,8 +17,8 @@ using namespace std;
 int main() {
     constexpr double PI = 3.141592653589793;
 
-    fstream csv_file("data_set.csv", ios::out);
-    fstream text_file("data_set.txt", ios::out);
+    fstream csv_file("training_dataset.csv", ios::out);
+    fstream text_file("training_dataset.txt", ios::out);
     vector<string> data; 
     float t;
     int label;
