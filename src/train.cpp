@@ -41,7 +41,7 @@ int main() {
         ss >> x >> comma >> y >> comma >> label;
         Eigen::VectorXf a0(2);
         a0 << x, y;
-
+                           
         Eigen::VectorXf a1 = ReLU(weighted_sum(W0, a0, b0));
         Eigen::VectorXf a2 = ReLU(weighted_sum(W1, a1, b1));
         Eigen::VectorXf a3 = sigmoid(weighted_sum(W2, a2, b2));
