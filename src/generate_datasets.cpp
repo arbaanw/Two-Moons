@@ -1,8 +1,3 @@
-/*
-Crescent 1: x1(t) = cos(t), y1(t) = sin(t)
-Crescent 2: x2(t) = 1 - cos(t), y2(t) = -sin(t) + 0.5
-Domain: 0 <= t <= pi
-*/
 
 #include <iostream>
 #include <fstream>
@@ -11,15 +6,17 @@ Domain: 0 <= t <= pi
 #include <vector>
 #include <algorithm>
 #include <random>
+#include <deque>
 
 using namespace std;
 
 int main() {
     constexpr double PI = 3.141592653589793;
 
-    fstream csv_file("training_dataset.csv", ios::out);
-    fstream text_file("training_dataset.txt", ios::out);
-    vector<string> data; 
+    fstream training_dataset_file("training_dataset.csv", ios::out);
+    fstream testing_dataset_file("testing_dataset.csv", ios::out);
+    deque<string> data; 
+    vector<string> testing_dataset;
     float t;
     int label;
     
@@ -46,9 +43,17 @@ int main() {
     mt19937 gen(std::random_device{}());
     shuffle(data.begin(), data.end(), gen);
 
+    for (int i = 0; i < 50000; i++) {
+        testing_dataset.push_back(data[0]);
+        data.pop_front();
+    }
+
     for (const auto& item : data) {
-        csv_file << item << " ";
-        text_file << item << " ";
+        training_dataset_file << item;
+    }
+
+    for (const auto& item : testing_dataset) {
+        testing_dataset_file << item;
     }
 
     return 0;
