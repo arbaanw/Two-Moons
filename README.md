@@ -21,7 +21,7 @@ The dataset was generated using the following equations:
 ![two-moons equation](assets/images/two-moons-eqn.png)
 
 A few samples:
-```csv
+```
 0.748503,0.663131,0
 0.878580,0.477595,0
 1.231476,-0.472841,1
@@ -80,7 +80,7 @@ The model was evaluated on 50,000 previously unseen testing samples.
 | Training samples | 149,948 |
 | Testing samples | 50,000 |
 | Test Accuracy | 100.00% |
-| Epochs | XX |
+| Epochs | 6 |
 
 ## TECHNOLOGIES
 - C++
